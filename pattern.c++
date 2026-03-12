@@ -22,16 +22,17 @@ int main(){
     int n;
     cin>>n;
 
-    for(int i=0;i<2*n-1;i++){
-          for(int j=0;j<2*n-1;j++){
-            int top =i;
-            int left=j;
-            int bottom=(2*n-2)-i;
-            int right=(2*n-2)-j;
-            int minDis=min(min(top,bottom),min(left,right));
+   for(int i=0;i<2*n-1;i++){
+    for(int j=0;j<2*n-1;j++){
+        int top=i;
+        int left=j;
+        int right=(2*n-2)-i;
+        int bottom=(2*n-2)-j;
 
-            cout<<(n-minDis)<<" ";
-          }
-          cout<<endl;
+        int minDis=min(min(top,left),min(bottom,right));
+
+        cout<<(n-minDis)<<" ";
     }
+    cout<<endl;
+   }
 }
